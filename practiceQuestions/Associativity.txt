@@ -1,0 +1,19 @@
+ Java Operators Associativity Table (Excluding Bitwise Operators) 💡
+
+✅ Table:
+Category	Operators	Associativity	Precedence
+Postfix	expr++, expr--	Left to Right	Highest
+Unary	++expr, --expr, +, -, !, ~	Right to Left	Higher
+Arithmetic	*, /, %	Left to Right	High
+Addition/Subtraction	+, -	Left to Right	Medium
+Shift	<<, >>, >>>	Left to Right	Medium
+Relational	<, <=, >, >=	Left to Right	Lower
+Equality	==, !=	Left to Right	Lower
+Logical AND	&&	Left to Right	Low
+Logical OR	`		`
+Ternary	? :	Right to Left	Lower
+Assignment	=, +=, -=, *=, /=, %=, &=, ^=, `	=, <<=, >>=, >>>=`	Right to Left
+🔥 Key Points:
+Associativity determines whether the expression is evaluated left-to-right or right-to-left when operators have the same precedence.
+Precedence defines the order in which operators are executed.
+Right-to-left associativity mostly applies to unary, ternary, and assignment operators.
