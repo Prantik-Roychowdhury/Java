@@ -1,0 +1,67 @@
+Binary Codes
+0: 0V
+1: +5V
+
+Assembly: Uses Mnemonics
+ + is ADD
+ * is MUL
+ / is DIV
+*Assembler is a software thats used toconvert assemblylevel language into Binary Language*
+
+High Level Language: More human readable
+
+Java: Features of Java:-
+
+1)Java is a class-based Language
+2)Java is platform independent
+3)Java is strictly-typed language
+4)Java is very flexible and scalable
+5)Java is secured
+6)Java is multi-threaded
+7)Java is value-typed
+
+JDK: Java Developement Kit
+->WHat is JDK?
+->Why is jdk used?
+
+JDK contains:
+1)Javac(Java compier)
+2)JRE(Java Run time Environment): Library files, byte code verifier, JVM(Java Virtual Machine):JIT(Just In Time Compiler), RTS(Runtime System)
+
+class ClassName
+{
+Declaration
+Initialization: Static, Non-static, Constructor
+/*
+Writes the entire Java Program
+*/
+}
+System.out.println([Data]) [] -> Shows Optional.
+System.out.print(Data)
+s.o.print() is the only method that requires a data to be printed.
+
+1)Keywords
+2)Identifiers
+3)Literals
+
+Keywords:
+1)Lowercase
+2)Predefined with a set of instructions
+
+Identifiers:
+
+Rules:
+1)An identifier cannot star with a number
+2)Only '_' and '$' signs are the only 2 special characters usind in Java Components.
+3) Keywirds cannot be used as identifiers
+
+Conventions:
+1)For class: First letter of every word must be capital
+2)For Methods: First letter of 1st word must be lowrcase and First letter of 2nd word must be Uppercase
+3)For Variables: Just like methods
+4)Never name a class or a variable or a method with an existing package name or an existing class name
+
+Literals: Raw data that is used in a program
+Types of Literals:
+1)Singlevalue
+2)Multivalue
