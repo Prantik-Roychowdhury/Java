@@ -4,10 +4,7 @@ public class Driver
 {
     public static void main(String[] args)
     {
-        Vehicle vehicle = new Vehicle();
-        Car car = new Car();
-        Bike bike = new Bike();
-        vehicle.display();
-        System.out.println(bike.name);
+        Car car = new Car("Tata","V8",1600);
+        System.out.println(car.name+" "+car.engineType+" "+ car.hp);
     }
 }
