@@ -1,0 +1,5 @@
+Polymorphism:
+'Poly' means Many and 'Morph' means Forms. An object exhibiting multiple forms
+In Java we have 2 types of Polymorphism:
+1) Compile-time: Achieved using Method Overloading
+2) Run-time: Achieved using Inheritance,Method Overriding and Non-Primitive Typecasting
