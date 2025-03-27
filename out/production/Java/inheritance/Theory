@@ -1,0 +1,9 @@
+Types of Inheritance:
+1) Single Inheritance
+2) Multilevel Inheritance
+3) Hierarchical Inheritance
+4) Multiple Inheritance (through interfaces)
+5) Hybrid Inheritance
+Diamond Problem:
+Assume extends keyword can be used to extend 2 classes
+Can be solved by using Interfaces using

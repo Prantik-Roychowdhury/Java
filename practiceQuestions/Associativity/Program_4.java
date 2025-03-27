@@ -1,5 +1,5 @@
 package practiceQuestions.Associativity;
-
+//% and / have the same order of precedence
 public class Program_4
 {
     public static void main(String[] args)
