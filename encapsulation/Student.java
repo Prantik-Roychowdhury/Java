@@ -84,5 +84,9 @@ public class Student
             System.out.println("Password Updated");
             password = newPassword;
         }
+        else
+        {
+            System.out.println("Incorrect Password");
+        }
     }
 }
