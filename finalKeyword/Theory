@@ -1,0 +1,4 @@
+Final keyword makes a class inheritable: A final class can inherit other classes
+Final keyword makes a method, un-overridable
+Final keyword makes a variable value, unchangeable
+You can make main method, final
