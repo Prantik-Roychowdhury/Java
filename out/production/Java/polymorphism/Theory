@@ -3,3 +3,46 @@ Polymorphism:
 In Java we have 2 types of Polymorphism:
 1) Compile-time: Achieved using Method Overloading
 2) Run-time: Achieved using Inheritance,Method Overriding and Non-Primitive Typecasting
+In Method Overriding the inherited method gets overridden, i.e. it gets shadowed and is hidden from the visibility of the scope of the method i the sub class
+
+Visibility level:
+Public > Protected > Package-Level > Private
+
+Rules for Method Overriding:
+1) The visibility of a method can be increased during method overriding or kept the same as Parent's method but it should never be decreased.
+2) The return type of the method cannot be changed while overriding it. But it does allow the covariant return types
+
+Non Primitive Typecasting:
+Classified into two types: 1)Upcasting, 2)Downcasting
+
+The process of creating an object of child class and storing the reference variable in the Parent class reference variable is Upcasting
+Parent p = new Child()
+This is only possible because they have is-a relationship
+
+Note: Write your code in a way that does not require any changes and even if it does, make sure that it has minimal amount of changes
+
+Upcasting:
+1) With the help of Parent Reference, we can access the members of Parent adn the members inherited into child
+2)
+
+The process of converting an upcasted reference back to child class reference type is called as downcasting.
+
+Heading: What happens when Parent reference is accessing a non-static method?
+-> Animal a = new Animal();
+    a.sound();
+Every program goes through 2 phases, first compilation then execution. For the above statements written, the compiler looks for the syntaxes and semantics and allows the creation of child object and storing the reference inside Parent reference variable because the Animal and Dog class share an Is-A relationship between them
+When sound is called with the hep of Parent type reference variable, the compiler thinks that the programmer is trying to call the sound method of Animal Class (Parent). Hence it checks wether the sound method exists in the Animal class or not. Since the method is present in Animal Class, the method declaration will be binded to the method calling statement
+This process is called as Compile-time binding or Static binding.
+
+H2: During Runtime:The object of child is being created and stored inside the Parent type reference variable, i.e Animal.
+The method calling statement, instead of calling the method that belongs to the Parent class, i.e Animal Class, the method which was overridden in child class will be called.
+This is because the Parent reference variable contains the reference of child object and non-static method are called only using the object reference, hence even though the variable is of parent type, the reference inside that variable is of child type because of which the sound method of the child call will be called
+To access a non static member, the reference inside the container matters not the type of container
+
+static methods cannot be overridden, they get shadowed but only by another static method
+Non static methods are the only methods that get overridden and non static methods cannot be shadowed
+
+Covariant Return Type:
+It is a feature in Java where a method in subclass overrides a method from its superclass and returns a more specific type (Subclass) instead of the original return type
+
+Instance of Operators checks whether the
