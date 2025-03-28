@@ -40,3 +40,9 @@ This is because the Parent reference variable contains the reference of child ob
 To access a non static member, the reference inside the container matters not the type of container
 
 static methods cannot be overridden, they get shadowed but only by another static method
+Non static methods are the only methods that get overridden and non static methods cannot be shadowed
+
+Covariant Return Type:
+It is a feature in Java where a method in subclass overrides a method from its superclass and returns a more specific type (Subclass) instead of the original return type
+
+Instance of Operators checks whether the
