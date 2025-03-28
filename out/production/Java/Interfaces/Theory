@@ -1,0 +1,43 @@
+Template of a class
+All the non-static methods of an interface are public abstract by default
+All the variables in an interface are public static final by default
+Interface does not have a constructor, they cannot be instantiated
+Before Java 8, interface was built to have only abstract methods and final variables in it
+From Java 8, interface started to support concrete methods, created using, static modifier and default modifier
+In Java 9 private concrete methods were also introduced in interface
+Interface can be created by using the keyword interface
+Syntax:
+    interface identifier
+    {
+        //Java Code
+    }
+
+There are 2 types of interfaces:
+1)Uer-defined
+2)Pre-defined: 1)Functional interface, 2)Marker interface
+    Functional interface:
+        It is an interface which contains only 1 abstract method
+        Ex: Runnable Interface, Comparable Interface. Comparator Interface, Predicate, Function, Supplier and many more
+    Marker Interface:
+        An interface without having any abstract methods
+        Ex: Cloneable, Serializable
+Static methods of interface do not get inherited, to access them in another interface or class, then they have to be called with the help of Interface name
+Acts as a utility method of the interface
+Whenever we want to execute a java program from our interface, we can use static methods of the interface
+
+Default methods are concrete methods introduced in Interfaces from Java 8
+They are created by using the default modifier
+Whenever a common implementing method has to be used in each implementing class
+It takes up two natures
+When calling a default method in an interface the method declaration stays the same
+When calling a default method in a class the method declaration does not change except the access specifier, it becomes public
+In interface, the static functions are un-inheritable
+
+Multiple inheritance in Java with respect to Interfaces:
+Interface -> Interface : Uses extends
+To show multiple inheritance in interfaces:
+    interface A extends B,C
+Class -> Interface : Uses implements
+class C extends A implements B,D
+A class should always be a child to an interface
+We cannot access a default method in a static context in interface
