@@ -40,3 +40,29 @@ Whenever compiler encounters a checked exception, the compiler will throw an err
 Handling an exception:
 It is handled by using try and catch block
 Catch block will not be executed if an exception object was not created
+
+If the parent class method throws an error then the child class overridden method need not throw the exception
+throw keyword gives an explicit exception, throws keyword gives implicit exception
+When you are explicitly throwng a checked exception compiler would be aware of it and it throws an error, it forces us to handle the exception or declare the exception
+When an unchecked exception is explicitly thrown, compiler will not be aware of the exception, hence it does not force us to handle or declare the exception
+throws keyword can be used ina static or a nonstatic method
+for one throw keyword we can create 1 exception object
+
+Custom Exception:
+User defined exceptions, we create them by:
+1)Create a class
+2)Inheriting any of the Exception Class
+3) Initialize a message
+4)Override getMessage() to return initialized message
+There are 2 methods in Exception class:
+1)getMessage();
+@)printStackTrace()
+
+Any custom exception class created by extending the RunTimeException Class, will make it as an unchecked exception
+Any custom exception crated by inheriting any other exception class than RunTimeClass, will make it a checked exception
+
+The process of converting a primitive datatype into a non-primitive type is called boxing.
+Converting a primitive datatype into a non-primitive datatype implicitly is known as Autoboxing
+Converting a non primitive representation of a primitive data, back to its primitive form is called unboxing
+
+In case of Wrapper Classes the objects get auto-unboxed when used in an expression, works with every type of operator
