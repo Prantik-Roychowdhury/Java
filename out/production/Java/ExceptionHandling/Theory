@@ -1,0 +1,42 @@
+It is an object which is created due to faulty input or faulty logic which will lead to a runtime error and abrupt termination of the program if it is not handled
+There are two types of exceptions:
+1)Compile-Time and 2)Run-time
+RTS will check for exception handler in the class, if it is not present, it will pass it to JVM which has a Default exception class that terminates the program abruptly
+Hierarchy:(These are all classes)
+Object:
+    Throwable:
+        I)Exception:            II)Error:
+    i)Unchecked Exception:      Virtual Memory
+    Runtime:(Unchecked)         i)StackOverflowError
+    a)Arithmetic                ii)OutOfMemory
+    b)Nullpointer               iii)Linker
+    c)ClassCastException
+    d)NegativeArraySize
+    e)IndexOutOfBounds:
+      i)StringOutOfBounds, ii)ArrayOutOfBounds
+    ii)Checked Exception:
+    a)SQL, b)IO: FileNotFound
+
+Arithmetic Exception: Division by zero
+ClassCast Exception: When two non-primitive datatypes are being casted into the same datatype and if they do not have a Is-A relationship it will throw an exception
+NullPointer Exception: When a non-static member is being accessed by null reference
+IndexOutOfBounds Exception: When you try to access the index of a list which crosses the bounds of the list
+ArrayIndexOtOfBounds: Same thing bu in case of arrays
+StringIndexOutOfBounds: Same
+NegativeArraySizeException: When you provide the size of an array as a negative integer
+FileNotFoundException: When you try to access a file which does not exist in the absolute path provided by you.
+*Any problems that occur during at runtime is an exception not an error*
+
+Example of StackOverFlowError:
+    Recursion without a base condition
+
+ExceptionalInitializerError is a child class of Error
+Exception Propagation:It is a mechanism in Java where an exception is passed from the method in which it occurred to the calling methods in the call stack until it is caught and handled
+Throws(Keyword): The throws keyword is used in a method declaration to specify that the method might throw certain exceptions, informing the caller that they must handle these exceptions either with try-catch blocks or by declaring them further up the call stack
+
+Unchecked Exception" Compiler unaware exceptions are known as unchecked exceptions, compiler aware exceptions are known as checked exceptions
+Irrespective of the type of exception (checked or unchecked) an exception object is always created during runtime or during executions.
+Whenever compiler encounters a checked exception, the compiler will throw an error and force the programmer to either handle the exception or throw the exception
+Handling an exception:
+It is handled by using try and catch block
+Catch block will not be executed if an exception object was not created
