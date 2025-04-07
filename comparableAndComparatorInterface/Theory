@@ -1,0 +1,7 @@
+public int compareTo(T t)
+{
+\\Code
+}
+In the comparator interface, this method is used to find out the bigger object by size in a given criteria
+Using comparable interface, we can only compare one attribute of an object.
+To use multiple attributes to compare, we can use the comparator interface

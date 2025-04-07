@@ -64,3 +64,5 @@ Any custom exception crated by inheriting any other exception class than RunTime
 The process of converting a primitive datatype into a non-primitive type is called boxing.
 Converting a primitive datatype into a non-primitive datatype implicitly is known as Autoboxing
 Converting a non primitive representation of a primitive data, back to its primitive form is called unboxing
+
+In case of Wrapper Classes the objects get auto-unboxed when used in an expression, works with every type of operator
