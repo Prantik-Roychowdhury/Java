@@ -1,0 +1,5 @@
+Size: The amount of data stored
+Capacity: The amount of data that can be stored
+Once the capacity is full it will dynamically increase the capacity with the formula: (Old Capacity * 2) + 2
+String buffer is thread safe, it is synchronised
+String builder is thread unsafe and it is not synchronised

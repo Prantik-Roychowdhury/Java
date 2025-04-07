@@ -1,0 +1,114 @@
+If the method changes the object reference, will it change the original reference outside the method?
+ChatGPT said:
+No, if the method changes the object reference, it will not affect the original reference outside the method.
+💡Why?
+In Java, object references are passed by value.
+When you reassign the reference inside the method, you’re only changing the local copy of the reference.
+The original reference outside the method still points to the original object.
+
+What happens when you pass an object to a method in Java?
+ChatGPT said:
+When you pass an object to a method in Java:
+Pass-by-value (reference):
+Java always uses pass-by-value.
+For objects, the reference (memory address) is passed by value, not the actual object.
+Modifying the object:
+If you change the object’s fields inside the method, the changes persist outside the method because both references point to the same object.
+Reassigning the reference:
+If you reassign the reference inside the method, it only affects the local reference, not the original one outside the method.
+
+When you pass an object reference to a method in Java:
+Pass-by-value: Java always uses pass-by-value, even for objects. However, the value being passed is the reference to the object, not the object itself.
+Modifying the object: Changes made to the object's fields inside the method persist outside the method since both the original and the parameter reference point to the same object.
+Reassigning the reference: If you reassign the reference inside the method, it won’t affect the original reference outside the method.
+✅ Example:
+class Example {
+    static void modifyObject(Person p) {
+        p.name = "Alice";  // Changes the object itself
+        p = new Person("Bob");  // Only changes the local reference
+    }
+
+    public static void main(String[] args) {
+        Person person = new Person("John");
+        modifyObject(person);
+        System.out.println(person.name);  // Output: Alice (not Bob)
+    }
+}
+👉 The object itself is modified, but reassigning the reference inside the method has no impact outside.
+
+You said:
+Why is the output Alice, and not Bob
+ChatGPT said:
+Great question! 👏 The reason the output is Alice and not Bob comes down to how Java handles pass-by-value for object references.
+💡 Explanation:
+Person person = new Person("John");
+The person variable holds a reference (memory address) pointing to the Person object.
+Passing the reference to the method:
+When calling modifyObject(person), the reference is passed by value.
+Both the original reference (person) and the parameter reference (p) now point to the same object.
+Modifying the object:
+p.name = "Alice";
+This modifies the object itself, so the change is visible outside the method.
+Reassigning the local reference:
+p = new Person("Bob");
+Here, the local reference p now points to a new Person object.
+However, the original reference person in main() still points to the same object (now with the name "Alice").
+The reassignment only affects the local reference p, not the original reference.
+✅ Key takeaway:
+Since the original reference still points to the modified object (Alice), the output is Alice, not Bob.
+
+Code:
+class Person
+{
+     String name;
+}
+public class Main
+{
+     public static void modifyPerson(Person p)
+     {
+           p.name = "John";
+           p = new Person();
+           p.name = "Jane";
+      }
+      public static void main(String[]args)
+      {
+           Person person = new Person();
+           person.name = "Alice";
+           modifyPerson(person);
+           System.out.println(person.name);
+      }
+}
+What will be the output?
+
+The output will be:
+John
+💡 Explanation:
+Initial setup:
+Person person = new Person();
+person.name = "Alice";
+A Person object is created with the name Alice.
+
+The reference person points to this object.
+
+Method call:
+modifyPerson(person);
+The reference person is passed by value to the method.
+
+Inside the method, both p (local reference) and person (original reference) point to the same object.
+
+Modifying the object:
+p.name = "John";
+Since both references point to the same object, this modifies the original object’s name to John.
+
+Reassigning the local reference:
+p = new Person();
+p.name = "Jane";
+
+A new Person object is created and assigned to the local reference p.
+However, this does not affect the original reference (person) outside the method.
+The new object (Jane) is only accessible inside the method.
+
+Final output:
+System.out.println(person.name);
+The original reference (person) still points to the modified object (John), so the output is:
+John

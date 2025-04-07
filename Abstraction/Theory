@@ -1,0 +1,15 @@
+Abstraction in Java refers to hiding the implementation details of a code and exposing only the necessary information to the user
+Abstract methods wll only have method declaration and they end with a semicolon(;)
+If a class contains any incomplete or abstract methods, then the class is also considered to be incomplete, hence the class should also be made as abstract
+If a class is made as abstract then it cannot be instantiated
+A variable cannot be made as abstract
+Static methods cannot be made abstract, a method cannot have two types of modifiers
+Both static and non static variables can exist in an abstract class, these variables can have any scope, public,protected,package-level,private
+Concrete Methods can also exist in an Abstract class,and they can't be made private
+An abstract class can have both abstract as well as concrete methods
+Abstract classes will have a constructor
+When an abstract class gets inherited, either:
+1)The child class has to made as abstract, or
+2) Provide the implementation of the abstract method in the abstract class
+The Child class can alter the scope of visibility of the overridden method to a greater scope of visibility but not lower
+An abstract class can have only abstract methods, it can have only concrete methods, or it can have both (except abstract static)
