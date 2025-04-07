@@ -1,0 +1,14 @@
+What is LinkedList?
+-> A data structure that has a data and an address for the next node
+* The fundamental element of a linked-list is a node
+
+Singly LinkedList:
+class Node
+{
+    int data;
+    Node next;
+    Node(int data)
+    {
+        this.data = data;
+    }
+}
