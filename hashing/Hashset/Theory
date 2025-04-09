@@ -1,0 +1,13 @@
+Why is HashSet an important datastructure?
+-> Because HashSets are extremely time efficient, i.e they have low time complexity
+Operations with Time Complexity
+Insert/Add      --> O(1)
+Search/Contains --> O(1)
+Delete/Remove   --> O(1)
+
+In comparison with Sorted Array
+O(1)    |   O(n)
+O(1)    |   O(log n)
+O(1)    |   O(n)
+
+HashSets do not contain repeated value, i.e every value in the HashSet is unique
