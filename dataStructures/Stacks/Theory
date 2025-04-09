@@ -1,0 +1,10 @@
+Stacks:
+1) With Array:
+    Adding a data into a stack is called push, the operation is called push operation
+    Deleting a data from the top of the stack is called pop, the operation is known as pop operation
+    To view an element from the stack, we use the peek operation.
+
+    Use top variable to start adding the data into the stack, initially the top is initialized by -1
+    To stop adding elements beyond the length of the array, you get an error, called stack overflow, use the following condition to prevent overflow
+    Condition:
+        if(top==size-1)
