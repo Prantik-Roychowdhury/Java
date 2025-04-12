@@ -1,11 +1,13 @@
 package hashing.HashMap;
 
+import java.util.Objects;
+
 public class HasMapImplementation
 {
     Entry [] bucket = new Entry[16];
     private int findBucketIndex(int key)
     {
-        return Math.abs(Integer.hashCode(key)%bucket.length);
+        return Math.abs(Objects.hashCode(key)%bucket.length);
     }
     public void put(int key, int val)
     {
@@ -23,6 +25,10 @@ public class HasMapImplementation
         }
         newNode.next = bucket[index];
         bucket[index] = newNode;
+    }
+    public void delete(int key)
+    {
+
     }
     public static void main(String[] args)
     {
