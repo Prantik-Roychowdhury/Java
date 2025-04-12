@@ -11,6 +11,7 @@ public class InputDriver
     static Multiplication mul = new Multiplication();
     static Division div = new Division();
     static Scanner sc = new Scanner(System.in);
+    //Non-Static Initializer
     {
         try
         {
