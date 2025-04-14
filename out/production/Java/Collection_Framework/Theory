@@ -1,0 +1,33 @@
+Characteristics of Collection Framework
+We can store collection of heterogeneous type of data.
+Size is not fixed.
+For all CRUD operations, it has some in-built methods.
+Data is stored in the form of objects i.e., auto-boxing will take place.
+
+Collection Interface:
+Collection is an interface present in java.util package.
+Iterable interface provides a way to iterate through the elements of a collection by using methods like:
+iterator()
+hasNext()
+next()
+
+Miscellaneous Methods
+size() – returns the length.
+isEmpty() – checks whether collection is empty & returns boolean result.
+hashCode()
+equals()
+
+Collection framework is present in util package, ArrayList is the implementing class of list interface
+ArrayList:
+ArrayLists internally makes use of dynamic array
+ArrayLists can store null values
+ArrayList is an index based datastructures
+ArrayList can store heterogeneous data
+ArrayList can store duplicates
+ArrayLists can be sorted
+The initial capacity is 10
+The ArrayList is full, a new array will be created internally whose size is going to be 50% more than the previous array.
+It is calculate by, new capacity = Old Capacity + (Old capacity/2)
+Insertion and Deletion takes O(n)
+ArrayList is not thread safe, also known as Asynchronous
+Insertion order is maintained

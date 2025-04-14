@@ -1,0 +1,7 @@
+In generics we make use of type object which makes it accept only specific type of data, usually class type or the specified object type data
+If we do not provide anything in the angular braces, the compiler will automatically accept Object type object
+In the angular braces we pass exclusive type data
+Mainly used to avoid class cast errors
+Type operators are made for non-primitive datatypes and not for primitive ones
+We cannot a specific type of array
+Student<? extends Person>student: T in this statement may contain the cub-class object of T or the object of T itself

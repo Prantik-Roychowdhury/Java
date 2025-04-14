@@ -1,4 +1,4 @@
-Why is HashSet an important datastructure?
+Why is HashSet an important datastructures?
 -> Because HashSets are extremely time efficient, i.e they have low time complexity
 Operations with Time Complexity
 Insert/Add      --> O(1)
@@ -11,3 +11,16 @@ O(1)    |   O(log n)
 O(1)    |   O(n)
 
 HashSets do not contain repeated value, i.e every value in the HashSet is unique
+
+Every object has a unique hash code (Object.hasCode())
+Hash function generates the index based on the key, the index contains the node value (Node: [key|value|next])
+
+How hashtable is being made:
+    current = arr[1]
+    newNode.next = current
+    arr[i] = newNode
+
+For an entry find the index based on the key
+Check for an already present in the index
+If it is present then check for the entry key and the new key, if they key is same, update the value, if the key is not same then add this new node as the head
+If there was no entry present then it will be stored as head directly
