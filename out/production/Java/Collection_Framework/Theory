@@ -39,3 +39,10 @@ Linked list is a node based datastructure
 Linear data structure
 No initial capacity or incremental capacity of linked list
 Add duplicates, null values and heterogeneous value
+
+Vectors:
+The internal datastructre is dynamic array
+It is a legacy class
+Vector can hold duplicates, null and heterogenous values
+The insertion order is maintained
+When a vector is completely filled a new vector with twice the size will be created and the elements will be copied into the new list from the new list
