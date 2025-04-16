@@ -31,3 +31,11 @@ It is calculate by, new capacity = Old Capacity + (Old capacity/2)
 Insertion and Deletion takes O(n)
 ArrayList is not thread safe, also known as Asynchronous
 Insertion order is maintained
+
+In collections, linked list is implemented by Doubly-LinkedList
+Preferred in case of deletion, insertion
+LinkedList is also asynchornized
+Linked list is a node based datastructure
+Linear data structure
+No initial capacity or incremental capacity of linked list
+Add duplicates, null values and heterogeneous value
