@@ -63,3 +63,37 @@ Sets:
 
     ClassCast Exception occurs due to the compareTo implementation, as the object types are different, it throws a class clast exception
     internally Integer class has compareTo method implemented, which is then used to arrange the data in ascending order thanks to auto-comparision
+
+HashSets:
+    The internal datastructures of HashSet is Hashmap
+    Hashset does not allow duplicates
+    Allows null values.
+    Allows heterogeneous values
+    Cannot be sorted
+    When an object of hashset is created using a no arg constructor, it constructs a new empty set: the backing hashmap instance has default initial capacity of 16 and load factor as 0.75
+    Hashset is preferred to store unique value and faster storage and access(fetching)
+    Hashset internally makes use of equals and hashcode() methods to remove the duplicates
+    It is a non-linear data structure, it is also a non-indexed data structure
+    The insertion order of Hashset cannot be predicted
+    In HashSet, both the key and the value of two objects have to be same to be considered to be a duplicate
+
+Linked HashSet:
+    Insertion order is maintained
+    It uses LinkedList internally
+    It uses Linear Probing
+    It is the child class is HashSet class
+    Mainly used for Insertion
+
+Priority Queue:
+    An unbounded priority queue based on a priority heap. The elements of the priority queue are ordered according to their natural ordering, or by a Comparator provided at queue construction time, depending on which constructor is used. A priority queue does not permit null elements. A priority queue relying on natural ordering also does not permit insertion of non-comparable objects (doing so may result in ClassCastException).
+    As elements are added to a priority queue, its capacity grows automatically. The details of the growth policy are not specified.
+    It uses min-head trees, it will not throw an error on using heterogeneous values, but it will cause class cast exception
+    Null values are also now allowed. Gives Null Pointer Exception.
+    The default capacity is 11.
+    The natural ordering is dependent on priorities: it is a self-balancing tree
+
+ArrayDeque:
+    First in First out Principle
+    ArrayDeque do not have any capacity restrictions
+    They are asynchronous in nature
+    It can be used as a queue and a stack
