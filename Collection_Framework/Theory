@@ -1,0 +1,99 @@
+Characteristics of Collection Framework
+We can store collection of heterogeneous type of data.
+Size is not fixed.
+For all CRUD operations, it has some in-built methods.
+Data is stored in the form of objects i.e., auto-boxing will take place.
+
+Collection Interface:
+Collection is an interface present in java.util package.
+Iterable interface provides a way to iterate through the elements of a collection by using methods like:
+iterator()
+hasNext()
+next()
+
+Miscellaneous Methods
+size() – returns the length.
+isEmpty() – checks whether collection is empty & returns boolean result.
+hashCode()
+equals()
+
+Collection framework is present in util package, ArrayList is the implementing class of list interface
+ArrayList:
+ArrayLists internally makes use of dynamic array
+ArrayLists can store null values
+ArrayList is an index based datastructures
+ArrayList can store heterogeneous data
+ArrayList can store duplicates
+ArrayLists can be sorted
+The initial capacity is 10
+The ArrayList is full, a new array will be created internally whose size is going to be 50% more than the previous array.
+It is calculate by, new capacity = Old Capacity + (Old capacity/2)
+Insertion and Deletion takes O(n)
+ArrayList is not thread safe, also known as Asynchronous
+Insertion order is maintained
+
+In collections, linked list is implemented by Doubly-LinkedList
+Preferred in case of deletion, insertion
+LinkedList is also synchronized
+Linked list is a node based datastructures
+Linear data structure
+No initial capacity or incremental capacity of linked list
+Add duplicates, null values and heterogeneous value
+
+Vectors:
+The internal datastructre is dynamic array
+It is a legacy class
+Vector can hold duplicates, null and heterogenous values
+The insertion order is maintained
+When a vector is completely filled a new vector with twice the size will be created and the elements will be copied into the new list from the new list
+
+Sets:
+    Tree set:
+    Internal datastructures of tree set is a tree map
+    All the elements which are being added in the tree set must implement comparable interface
+    Tree set does not allow duplicates, null values.
+    If null values are added the program does not throw an error instead it throws a NullPointer exception during execution
+    Tree set internally makes use of compareTo() method of comparator interface to remove duplicates
+    Insertion order in tree set is not maintained
+    All the elements inserted will be sorted in ascending order as its natural sorting order
+    Tree set is not indexed based, it is node based, makes use of red-black tree
+    Tree set does not support heterogeneous values as well
+    If heterogeneous values are added ht program does not throw any error, instead it throws a class cast exception
+    Tree set is preferred for adding and removing of elements as it takes O(logn) time, also it is preferred to use when a set needs to be sorted
+
+    ClassCast Exception occurs due to the compareTo implementation, as the object types are different, it throws a class clast exception
+    internally Integer class has compareTo method implemented, which is then used to arrange the data in ascending order thanks to auto-comparision
+
+HashSets:
+    The internal datastructures of HashSet is Hashmap
+    Hashset does not allow duplicates
+    Allows null values.
+    Allows heterogeneous values
+    Cannot be sorted
+    When an object of hashset is created using a no arg constructor, it constructs a new empty set: the backing hashmap instance has default initial capacity of 16 and load factor as 0.75
+    Hashset is preferred to store unique value and faster storage and access(fetching)
+    Hashset internally makes use of equals and hashcode() methods to remove the duplicates
+    It is a non-linear data structure, it is also a non-indexed data structure
+    The insertion order of Hashset cannot be predicted
+    In HashSet, both the key and the value of two objects have to be same to be considered to be a duplicate
+
+Linked HashSet:
+    Insertion order is maintained
+    It uses LinkedList internally
+    It uses Linear Probing
+    It is the child class is HashSet class
+    Mainly used for Insertion
+
+Priority Queue:
+    An unbounded priority queue based on a priority heap. The elements of the priority queue are ordered according to their natural ordering, or by a Comparator provided at queue construction time, depending on which constructor is used. A priority queue does not permit null elements. A priority queue relying on natural ordering also does not permit insertion of non-comparable objects (doing so may result in ClassCastException).
+    As elements are added to a priority queue, its capacity grows automatically. The details of the growth policy are not specified.
+    It uses min-head trees, it will not throw an error on using heterogeneous values, but it will cause class cast exception
+    Null values are also now allowed. Gives Null Pointer Exception.
+    The default capacity is 11.
+    The natural ordering is dependent on priorities: it is a self-balancing tree
+
+ArrayDeque:
+    First in First out Principle
+    ArrayDeque do not have any capacity restrictions
+    They are asynchronous in nature
+    It can be used as a queue and a stack

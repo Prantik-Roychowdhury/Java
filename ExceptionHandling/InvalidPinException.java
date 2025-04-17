@@ -1,9 +1,9 @@
 package ExceptionHandling;
 
-public class InvalidPinExceltion extends RuntimeException
+public class InvalidPinException extends RuntimeException
 {
     private String message;
-    public InvalidPinExceltion(String message)
+    public InvalidPinException(String message)
     {
         this.message = message;
     }
