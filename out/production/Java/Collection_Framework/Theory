@@ -34,8 +34,8 @@ Insertion order is maintained
 
 In collections, linked list is implemented by Doubly-LinkedList
 Preferred in case of deletion, insertion
-LinkedList is also asynchornized
-Linked list is a node based datastructure
+LinkedList is also synchronized
+Linked list is a node based datastructures
 Linear data structure
 No initial capacity or incremental capacity of linked list
 Add duplicates, null values and heterogeneous value
@@ -46,3 +46,20 @@ It is a legacy class
 Vector can hold duplicates, null and heterogenous values
 The insertion order is maintained
 When a vector is completely filled a new vector with twice the size will be created and the elements will be copied into the new list from the new list
+
+Sets:
+    Tree set:
+    Internal datastructures of tree set is a tree map
+    All the elements which are being added in the tree set must implement comparable interface
+    Tree set does not allow duplicates, null values.
+    If null values are added the program does not throw an error instead it throws a NullPointer exception during execution
+    Tree set internally makes use of compareTo() method of comparator interface to remove duplicates
+    Insertion order in tree set is not maintained
+    All the elements inserted will be sorted in ascending order as its natural sorting order
+    Tree set is not indexed based, it is node based, makes use of red-black tree
+    Tree set does not support heterogeneous values as well
+    If heterogeneous values are added ht program does not throw any error, instead it throws a class cast exception
+    Tree set is preferred for adding and removing of elements as it takes O(logn) time, also it is preferred to use when a set needs to be sorted
+
+    ClassCast Exception occurs due to the compareTo implementation, as the object types are different, it throws a class clast exception
+    internally Integer class has compareTo method implemented, which is then used to arrange the data in ascending order thanks to auto-comparision
