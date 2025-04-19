@@ -20,3 +20,4 @@ The natural sorting order of treemaps is decided by keys (ascending order)
 All the keys that are being added into the treemap must implement the comparable interface, and the keys must be of same type of comparable data.
 In treemap the keys cannot be duplicated, if a duplicate is added the old entry will be changed with the new entry
 Keys can never be null, values can be null, we can have multiple null values with different keys
+Iterating over a map is impossible using Iterator 
