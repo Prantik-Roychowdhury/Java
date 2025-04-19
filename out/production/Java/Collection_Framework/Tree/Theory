@@ -1,0 +1,22 @@
+Map hierarchy:  It is present in the utils package
+                Map
+SortedMap       HashMap     LinkedHashMap
+    |
+NavigableMap
+    |
+    |
+TreeMap
+
+Method:
+put(key, value): key and value together is called an entry
+clear():    removes the entire collection
+replace(Key, value): Replaces the value at the given key
+keySet(): Used to fetch only the keys of the entire map
+values(): Fetches only the values of the map
+entrySet(): method provides a way to access these key-value pairs as a set of Map.Entry objects
+
+The keys in a treemap must be of homogeneous type, it will throw a class cast exception otherwise
+The natural sorting order of treemaps is decided by keys (ascending order)
+All the keys that are being added into the treemap must implement the comparable interface, and the keys must be of same type of comparable data.
+In treemap the keys cannot be duplicated, if a duplicate is added the old entry will be changed with the new entry
+Keys can never be null, values can be null, we can have multiple null values with different keys
