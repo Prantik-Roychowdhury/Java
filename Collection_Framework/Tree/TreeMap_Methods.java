@@ -1,17 +1,23 @@
 package Collection_Framework.Tree;
 
-import java.util.TreeMap;
+import java.util.*;
 
 public class TreeMap_Methods
 {
     public static void main(String[] args)
     {
-        TreeMap tm = new TreeMap((o1,o2)->(Integer)o2-(Integer)o1);
-        tm.put(1, "Hi");
-        tm.put(3, "Hello");
-        tm.put(2, null);
-        tm.put(3, "Fk u");
-        System.out.println(tm);
-        System.out.println(tm.containsValue("Hello"));
+        TreeMap<String, List<String>> map = new TreeMap<>();
+        List<String>l1 = Arrays.asList("Hyd","Bangalore","Kolkata");
+        List<String>l2 = Arrays.asList("J&K","Assam","Mizoram");
+        List<String>l3 = Arrays.asList("Hubli","Dharwad","Bhilwara");
+        map.put("SBI", l1);
+        map.put("ICICI", l2);
+        map.put("Federal", l3);
+        System.out.println(map);
+        Set<Map.Entry<String, List<String>>> s = map.entrySet();
+        for (Map.Entry<String, List<String>> e:s)
+        {
+            System.out.println(e.getKey()+"--->"+e.getValue());
+        }
     }
 }
