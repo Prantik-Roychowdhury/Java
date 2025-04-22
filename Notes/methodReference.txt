@@ -1,0 +1,30 @@
+A Method Reference is a shortcut for writing lambda expressions that just call a method.
+
+Syntax:
+ClassName::methodName
+
+It’s basically saying:
+"Instead of writing a lambda that just calls a method, just reference the method directly."
+
+Why Use Method References?
+🔹 Cleaner and shorter syntax
+
+🔹 Improves readability
+
+🔹 Works with functional interfaces
+
+
+Types of Method References
+
+Type						                Syntax						        Example
+Reference to a static method			    ClassName::staticMethod				Math::abs
+
+Reference to an instance method
+of a particular  object                     object::instanceMethod			    System.out::println
+
+Reference to an instance method of 
+an arbitrary object of a particular type	ClassName::instanceMethod			String::toLowerCase
+
+Reference to a constructor			        ClassName::new					    ArrayList::new
+
+
