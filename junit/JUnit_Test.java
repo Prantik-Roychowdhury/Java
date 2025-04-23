@@ -10,6 +10,5 @@ public class JUnit_Test
     {
         Calculator cl = new Calculator(10,20);
         int s = cl.sum();
-        assertEquals
     }
 }
