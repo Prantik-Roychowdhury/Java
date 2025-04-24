@@ -1,0 +1,14 @@
+Person
+  - name: String
+  - age: int
+  - pets: List<Pet>
+  + Person(String name, int age)
+  + addPet(Pet pet)
+  + getPets(): List<Pet>
+
+Pet
+  - name: String
+  - species: String
+  + Pet(String name, String species)
+  + getName(): String
+  + getSpecies(): String
