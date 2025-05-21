@@ -16,13 +16,13 @@ Why Use Method References?
 
 Types of Method References
 
-Type						                            Syntax						            Example
-Reference to a static method			          ClassName::staticMethod				Math::abs
+Type						                                Syntax						            Example
+Reference to a static method			              ClassName::staticMethod				Math::abs
 
 Reference to an instance method
-of a particular  object                     object::instanceMethod			  System.out::println
+of a particular  object                         object::instanceMethod			  System.out::println
 
 Reference to an instance method of 
-an arbitrary object of a particular type	  ClassName::instanceMethod			String::toLowerCase
+an arbitrary object of a particular type	      ClassName::instanceMethod			String::toLowerCase
 
-Reference to a constructor			            ClassName::new					      ArrayList::new
+Reference to a constructor			                ClassName::new					      ArrayList::new
