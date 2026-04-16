@@ -1,0 +1,81 @@
+Skeleton of a Java Program
+
+The basic syntax of a java program is as follows:
+
+package packageName
+class ClassName
+{
+    access_specifier return type functionName(Parameters)
+    {
+        //Java Code that does stuff
+    }
+}
+
+Java requires some packages to run a program and one of those package is the java.lang package
+The java.lang package is a mandatory package that is required to run a program.
+The compiler will add this automatically even if the developer does not.
+
+The main method is the starting type of the program and it is always void as this is the only function that never returns a value to another function
+In a print statement in Java, we write a class, an object and a function to print something
+That statement is: System.out.println();
+System is a class that calls out which is an object and finally println() is a function.
+A key point to note is that when you declare a class as public, the filename should match the name of the class otherwise an error will arise that will not let your program to execute
+
+
+Reading Input from keyboard:
+
+To read input from keyboard we need to include the Scanner class
+To use the scanner class, we need to first import the util package and then create an object for the Scanner Class
+Syntax: Scanner variable = new Scanner(System.in);
+The System.in is the code needed to read input from the keyboard.
+
+Primitive data types in Java:
+
+1)byte    Size: 1
+2)short   Size: 2
+3)int     Size: 4
+4)long    Size: 8
+5)float   Size: 4
+6)double  Size: 8
+7)char    Size: 2
+8)boolean
+
+All Integer based datatypes are signed datatype.
+In a byte, there are 8 bits and one of those bits is reserved for the sign where:
+Zero(0) indicates Positive and One(1) indicates Negative
+Effectively, the largest positive number you can store in a byte is 127
+Negative numbers are stored in the form of 2's compliment
+You cannot assign a double value into a float datatype
+
+Variables
+
+A variable is a container that stores data for a program. It also follows a syntax:
+Syntax: Data_type name = value;
+The space taken by a variable depends on the datatype
+Now to write a variable, a developer must follow certain rules:
+1) Variables are case sensitive, so be careful on what you name a variable
+2) Contains Alphabets, Numbers or even the Dollar sign ($), it can even start from an Alphabet or the Dollar sign
+3) Name should not be a keyword
+4) Should not be a class name if class is also in use
+5) There are no limits on the length of a name
+6) Best practice for multi-worded variables is to use Camel Casing
+
+Literals are the static values that are written in a program this usually acts as a placeholder for the value to be updated later
+
+Java is a compiled as well as interpreted language
+
+Architecture of JVM:
+The basic memory breakup for a Java program is:
+Level 1(Method Area): The program
+Level 2(The Stack): The stack that stores the defined variables and knows the total amount of static memory required
+Level 3(Heap): The dynamic memory allocation takes place here, if there are objects created at run-time of the program.
+
+You may ask:
+How does a class gets stored in the memory?
+A Java program is loaded into the Java Virtual Machine (JVM) through a dynamic process called class loading, which occurs in three main stages: Loading, Linking, and Initialization.
+This process is managed by the ClassLoader Subsystem, which finds and reads compiled .class files (bytecode) into memory only when they are needed.
+
+When the class is loaded into JVM via ClassLoader, it only stores the methods.
+Once the code is loaded into the memory, JVM runs the JIT compiler and Interpreter to turn that compiled source code into the byte code
+Note: Java has its own garbage collector which does not need any changes to be made in the default configuration. It automatically collects garbage memory and dumps them during program execution.
+Which is also why, Java does not have pointers, that store references that can change the actual value of an object as we had in C
