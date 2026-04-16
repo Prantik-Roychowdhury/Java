@@ -1,0 +1,21 @@
+Shape (abstract)
+  - radius: double
+  - color: String
+  + Shape(double radius, String color)
+  + getArea(): double
+  + getPerimeter(): double
+
+Circle (concrete)
+  - radius: double
+  - color: String
+  + Circle(double radius, String color)
+  + getArea(): double
+  + getPerimeter(): double
+
+Rectangle (concrete)
+  - width: double
+  - height: double
+  - color: String
+  + Rectangle(double width, double height, String color)
+  + getArea(): double
+  + getPerimeter(): double
