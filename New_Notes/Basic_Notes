@@ -69,13 +69,59 @@ The basic memory breakup for a Java program is:
 Level 1(Method Area): The program
 Level 2(The Stack): The stack that stores the defined variables and knows the total amount of static memory required
 Level 3(Heap): The dynamic memory allocation takes place here, if there are objects created at run-time of the program.
+The class that gets loaded also creates an object that gets stored in the Heap area. This happens due to reflection API
 
 You may ask:
 How does a class gets stored in the memory?
 A Java program is loaded into the Java Virtual Machine (JVM) through a dynamic process called class loading, which occurs in three main stages: Loading, Linking, and Initialization.
 This process is managed by the ClassLoader Subsystem, which finds and reads compiled .class files (bytecode) into memory only when they are needed.
 
+There are 3 types of ClassLoaders:
+1)Bootstrap Class Loader: Loads all of the essential packages and libraries into the memory for executing a Java Program
+2)Extension Class Loader: Loads the classes that are used by JVM in runtime
+3)Application Class Loader: Loads all the other classes created by the developer.
+
+There are 3 processes that take place in the Linking stage of ClassLoaders:
+1)Verify: Checks if the byte code is a Java Byte Code or not
+2)Prepare: Allocating stack memory for our static variables in our classes
+3)Resolve: Writing the reference of a function or any other component that gets called via main method at runtime
+
+The Initialization phase initializes the static variables in our program
+
 When the class is loaded into JVM via ClassLoader, it only stores the methods.
 Once the code is loaded into the memory, JVM runs the JIT compiler and Interpreter to turn that compiled source code into the byte code
 Note: Java has its own garbage collector which does not need any changes to be made in the default configuration. It automatically collects garbage memory and dumps them during program execution.
 Which is also why, Java does not have pointers, that store references that can change the actual value of an object as we had in C
+
+Bit Merging and Bit Masking:
+
+In a byte, there are 8 bits these bits are binary 0's and 1's. In a scenario where we want to make the 0 bit as 1, we use merging:
+a = 0 0 0 0 0 0 0 0     In Decimal: a = 0
+b = 0 0 0 0 1 0 0 0     In Decimal: b = 8
+The developer needs to store the decimal value of 8 in a and this is performed by the Bitwise OR operation
+The logic then becomes: a = a|b ['|' stands for bitwise OR]
+This process is called Bit Merging
+
+The same process is repeated for Bit Masking, the only change being instead of using the bitwise OR operation it uses the bitwise AND operation
+This process is used when the developer wants to check a specific binary value in a binary string
+
+A byte can store 8 bits and most decimal numbers need only 1 nibble (1 nibble = 4 bits)
+So, in theory we can store 2 decimal numbers in just 1 byte, and in practice you can also perform the same
+To store the first value you can use Bit Merging
+Then to add the second number, first perform the left shift operation on the variable you want to add to
+And then perform merging again.
+Example:
+a = 0 0 0 0 0 0 0 0
+b = 0 0 0 0 0 1 0 1
+Merge:  a = 0 0 0 0 0 1 0 1
+
+b = 0 0 0 0 1 0 0 1
+Perform Left Shift on b:    b = 1 0 0 1 0 0 0 0
+Merge a and b again
+a = 0 0 0 0 0 1 0 1
+b = 1 0 0 1 0 0 0 0
+Merge:  a = 1 0 0 1     0 1 0 1
+               9     |      5       In Decimal the left side of the byte is 9 and the right side is 5
+
+Note: i) Bitwise operators may not be applied to float or double.
+      ii) The >>> operator shift right with zero fill/sign bit.
