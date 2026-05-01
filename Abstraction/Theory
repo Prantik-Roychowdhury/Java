@@ -13,3 +13,5 @@ When an abstract class gets inherited, either:
 2) Provide the implementation of the abstract method in the abstract class
 The Child class can alter the scope of visibility of the overridden method to a greater scope of visibility but not lower
 An abstract class can have only abstract methods, it can have only concrete methods, or it can have both (except abstract static)
+
+*YOU CANNOT CREATE AN OBJECT OF AN ABSTRACT CLASS*
