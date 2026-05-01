@@ -1,0 +1,33 @@
+Redefining a method of Super class into sub class is known as Method Overriding
+
+Dynamic method Dispatch: The method will be called depending on the object not on reference
+
+class Super
+{
+    public void display()
+    {
+        s.o.p("Hello");
+    }
+}
+
+class Sub extends Super
+{
+    public void display()
+    {
+        s.o.p("Hello Welcome");
+    }
+}
+
+class Test
+{
+    public static void main(String args[])
+    {
+        Super s = new Sub();
+        s.display(); What will it display? -> "Hello Welcome"
+    }
+}
+
+A super class reference holding an object of subclass and overrided method is called then the method of the object will be called not from the reference.
+This is Dynamic Method Dispatch.
+
+Dynamic Method Dispatch is used to implement run-time polymorphism.
